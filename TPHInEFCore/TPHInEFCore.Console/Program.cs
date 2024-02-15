@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Microsoft.Extensions.Hosting;
+using TPHInEFCore.Persistence.Configuration;
+
+var host = Host.CreateDefaultBuilder(args)
+    .ConfigureServices((context, services) =>
+    {
+        PersistenceConfiguration.Configure(services, context.Configuration);
+    })
+    .Build();
+
+host.Run();
