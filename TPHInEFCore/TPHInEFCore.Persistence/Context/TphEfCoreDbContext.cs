@@ -25,13 +25,14 @@ public class TphEfCoreDbContext(DbContextOptions<TphEfCoreDbContext> options) : 
     //}
 
     /// <summary>
-    /// In case you have an abstract base class
+    /// Setting custom discriminator
     /// </summary>
-    //public DbSet<Developer> developers { get; set; }
-    //public DbSet<TechnicalLead> TechnicalLeads { get; set; }
-    //public DbSet<Manager> Managers { get; set; }
     //protected override void OnModelCreating(ModelBuilder modelBuilder)
     //{
-    //    modelBuilder.Entity<Employee>().ToTable("Employees");
+    //    modelBuilder.Entity<Employee>()
+    //        .HasDiscriminator<ulong>(p=>p.EmployeePosition)
+    //        .HasValue<Developer>(1)
+    //        .HasValue<TechnicalLead>(2)
+    //        .HasValue<Manager>(3);
     //}
 }
