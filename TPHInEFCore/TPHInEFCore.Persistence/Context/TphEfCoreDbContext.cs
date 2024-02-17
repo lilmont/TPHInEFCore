@@ -23,4 +23,15 @@ public class TphEfCoreDbContext(DbContextOptions<TphEfCoreDbContext> options) : 
     //    modelBuilder.Entity<TechnicalLead>();
     //    modelBuilder.Entity<Manager>();
     //}
+
+    /// <summary>
+    /// In case you have an abstract base class
+    /// </summary>
+    //public DbSet<Developer> developers { get; set; }
+    //public DbSet<TechnicalLead> TechnicalLeads { get; set; }
+    //public DbSet<Manager> Managers { get; set; }
+    //protected override void OnModelCreating(ModelBuilder modelBuilder)
+    //{
+    //    modelBuilder.Entity<Employee>().ToTable("Employees");
+    //}
 }
