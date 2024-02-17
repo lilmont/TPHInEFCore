@@ -12,8 +12,8 @@ using TPHInEFCore.Persistence.Context;
 namespace TPHInEFCore.Persistence.Migrations
 {
     [DbContext(typeof(TphEfCoreDbContext))]
-    [Migration("20240215141051_init-db")]
-    partial class initdb
+    [Migration("20240217121942_init-Db")]
+    partial class initDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
